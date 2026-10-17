@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Ember & Oak coffee, cold drinks, and food menu.">
+  <title>Our Menu | Ember & Oak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><div class="container nav-wrap"><a class="logo" href="index.html"><span class="logo-mark">E<span>&</span>O</span><span class="logo-name">EMBER <span>&</span> OAK</span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">Our Story</a><a class="active" href="menu.html">Menu</a><a class="nav-cta" href="contact.html">Visit Us <span>↗</span></a></nav></div></header>
+
+  <main>
+    <section class="menu-page-hero"><div class="container menu-page-hero-inner"><p class="eyebrow">SOMETHING GOOD IS BREWING</p><h1>Made to be<br><em>savored.</em></h1><p>From your first morning sip to that afternoon pick-me-up, find a cup that feels like you.</p><div class="menu-hero-note">CRAFTED WITH CARE · SERVED WITH SOUL</div></div></section>
+
+    <section class="menu-listing section-space"><div class="container">
+      <div class="menu-toolbar"><div><p class="eyebrow">THE GOOD STUFF</p><h2 class="section-title">Our <em>menu.</em></h2></div><div class="menu-filters" role="group" aria-label="Filter menu items"><button class="filter-btn active" data-filter="all" aria-pressed="true">All items</button><button class="filter-btn" data-filter="coffee" aria-pressed="false">Coffee</button><button class="filter-btn" data-filter="cold" aria-pressed="false">Cold drinks</button><button class="filter-btn" data-filter="food" aria-pressed="false">Something to eat</button></div></div>
+
+      <div class="menu-grid">
+        <article class="menu-card" data-category="coffee"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85" alt="Latte coffee" loading="lazy"><span>HOUSE FAVORITE</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Velvet Latte</h3><strong>₹200</strong></div><p>Double espresso, silky steamed milk, a smooth finish.</p><div class="menu-card-foot"><span>☕ MILK COFFEE</span><span>HOT</span></div></div></article>
+        <article class="menu-card" data-category="coffee"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=85" alt="Black filter coffee" loading="lazy"><span>BREWED FRESH</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>House Pour Over</h3><strong>₹180</strong></div><p>A clean, balanced cup with delicate aromatic notes.</p><div class="menu-card-foot"><span>☕ FILTER COFFEE</span><span>HOT</span></div></div></article>
+        <article class="menu-card" data-category="cold"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Iced coffee" loading="lazy"><span>COOL CLASSIC</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Oak Cold Brew</h3><strong>₹220</strong></div><p>Slow-steeped coffee over ice, smooth and refreshingly bold.</p><div class="menu-card-foot"><span>❄ COLD BREW</span><span>COLD</span></div></div></article>
+        <article class="menu-card" data-category="coffee"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=85" alt="Espresso in a small cup" loading="lazy"><span>SMALL & MIGHTY</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Double Espresso</h3><strong>₹140</strong></div><p>Two rich shots with a bold aroma and a lasting finish.</p><div class="menu-card-foot"><span>☕ ESPRESSO</span><span>HOT</span></div></div></article>
+        <article class="menu-card" data-category="cold"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Iced milk coffee" loading="lazy"><span>AFTERNOON PICK</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Iced Vanilla Latte</h3><strong>₹230</strong></div><p>Espresso, cold milk, ice, and a gentle hint of vanilla.</p><div class="menu-card-foot"><span>❄ ICED LATTE</span><span>COLD</span></div></div></article>
+        <article class="menu-card" data-category="food"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85" alt="Freshly baked bread" loading="lazy"><span>BAKERY PICK</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Butter Croissant</h3><strong>₹160</strong></div><p>Flaky, golden layers made for a slow morning.</p><div class="menu-card-foot"><span>🥐 BAKERY</span><span>FOOD</span></div></div></article>
+        <article class="menu-card" data-category="food"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85" alt="Freshly baked cookies" loading="lazy"><span>SWEET MOMENT</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Chocolate Cookie</h3><strong>₹120</strong></div><p>A comforting classic with generous chocolate pieces.</p><div class="menu-card-foot"><span>🍪 SWEET TREAT</span><span>FOOD</span></div></div></article>
+        <article class="menu-card" data-category="food"><div class="menu-card-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85" alt="Fresh pastry on a plate" loading="lazy"><span>BAKED WITH LOVE</span></div><div class="menu-card-body"><div class="menu-card-title"><h3>Daily Pastry</h3><strong>₹150</strong></div><p>A rotating sweet treat to pair with your favorite cup.</p><div class="menu-card-foot"><span>🥐 BAKERY</span><span>FOOD</span></div></div></article>
+      </div>
+      <p class="menu-disclaimer">Portfolio concept menu. Items, prices, and availability are illustrative, not a real café offer.</p>
+    </div></section>
+    <section class="menu-bottom-cta"><div class="container"><p class="eyebrow light-eyebrow">FOUND YOUR FAVORITE?</p><h2>Let's make it <em>a moment.</em></h2><a class="btn btn-primary" href="contact.html">Get in Touch <span>↗</span></a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div><a class="logo footer-logo" href="index.html"><span class="logo-mark">E<span>&</span>O</span><span class="logo-name">EMBER <span>&</span> OAK</span></a><p class="footer-tagline">A slower cup in a faster world.</p></div><div class="footer-links"><h4>EXPLORE</h4><a href="index.html">Home</a><a href="about.html">Our Story</a><a href="contact.html">Contact</a></div><div class="footer-links"><h4>COME SAY HELLO</h4><p>Replace with your real address</p><p>Replace with your business email</p><p>Mon – Sun · 8 AM – 8 PM</p></div></div><div class="container footer-bottom"><span>© <span class="current-year">2026</span> Ember & Oak. Portfolio concept website.</span><span>CRAFTED WITH CARE ☕</span></div></footer>
+</body>
+</html>

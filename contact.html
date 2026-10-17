@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Ember & Oak to ask a question or plan your visit.">
+  <title>Contact Us | Ember & Oak</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html"><span class="logo-mark">E<span>&</span>O</span><span class="logo-name">EMBER <span>&</span> OAK</span></a>
+      <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a><a href="about.html">Our Story</a><a href="menu.html">Menu</a><a class="nav-cta active" href="contact.html">Visit Us <span>↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero"><div class="container"><p class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</p><h1>Let's start a<br><em>conversation.</em></h1><p>Have a question, an idea, or simply want to say hello? Our door is open.</p></div></section>
+
+    <section class="contact-main section-space"><div class="container contact-grid">
+      <div class="contact-info">
+        <p class="eyebrow">GET IN TOUCH</p><h2 class="section-title">A little note<br>goes a <em>long way.</em></h2><p class="contact-intro">Send us a message using the form. This demo form shows a confirmation in your browser; it does not send an actual email yet.</p>
+        <div class="contact-detail"><span class="contact-detail-icon">↗</span><div><h3>FIND OUR SPACE</h3><p>Replace this with your real business address.</p></div></div>
+        <div class="contact-detail"><span class="contact-detail-icon">@</span><div><h3>DROP US A LINE</h3><p>hello@example.com <small>· demo address</small></p></div></div>
+        <div class="contact-detail"><span class="contact-detail-icon">◷</span><div><h3>WHEN WE ARE HERE</h3><p>Monday – Sunday<br>8:00 AM – 8:00 PM</p></div></div>
+        <div class="contact-note"><span>GOOD TO KNOW</span><p>This is a fictional portfolio project. Update the sample address, email, and opening hours before presenting it as a real business.</p></div>
+      </div>
+
+      <div class="contact-form-panel">
+        <p class="eyebrow">SEND A MESSAGE</p><h2>What's on your mind?</h2>
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="form-field"><label for="name">Your name *</label><input id="name" name="name" type="text" placeholder="e.g. Alex Morgan" required minlength="2" autocomplete="name"></div>
+            <div class="form-field"><label for="email">Email address *</label><input id="email" name="email" type="email" placeholder="you@example.com" required autocomplete="email"></div>
+          </div>
+          <div class="form-field"><label for="subject">What is this about? *</label><select id="subject" name="subject" required><option value="">Choose a topic</option><option value="general">General question</option><option value="visit">Planning a visit</option><option value="feedback">Feedback</option><option value="other">Something else</option></select></div>
+          <div class="form-field"><label for="message">Your message *</label><textarea id="message" name="message" rows="5" placeholder="Write your message here..." required minlength="10"></textarea></div>
+          <label class="consent-row"><input type="checkbox" id="consent" required><span>I understand this is a portfolio demo form and no message will be sent.</span></label>
+          <button class="btn btn-dark form-submit" type="submit">Send Your Message <span>↗</span></button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div></section>
+
+    <section class="contact-image-band"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85" alt="Warm café interior with tables and natural light" loading="lazy"><div class="contact-image-overlay"><p class="eyebrow light-eyebrow">YOUR NEXT FAVORITE CORNER</p><h2>Good coffee is<br><em>better together.</em></h2></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><div><a class="logo footer-logo" href="index.html"><span class="logo-mark">E<span>&</span>O</span><span class="logo-name">EMBER <span>&</span> OAK</span></a><p class="footer-tagline">A slower cup in a faster world.</p></div><div class="footer-links"><h4>EXPLORE</h4><a href="index.html">Home</a><a href="about.html">Our Story</a><a href="menu.html">Menu</a></div><div class="footer-links"><h4>COME SAY HELLO</h4><p>Replace with your real address</p><p>Replace with your business email</p><p>Mon – Sun · 8 AM – 8 PM</p></div></div><div class="container footer-bottom"><span>© <span class="current-year">2026</span> Ember & Oak. Portfolio concept website.</span><span>CRAFTED WITH CARE ☕</span></div></footer>
+</body>
+</html>
