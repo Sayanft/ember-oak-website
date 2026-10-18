@@ -1,4 +1,5 @@
 
+
 /* =========================================
    EMBER & OAK - INTERACTIVE FEATURES
    ========================================= */
@@ -25,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       siteNav.classList.toggle("is-open", !isOpen);
     });
 
-    // Close the mobile menu after choosing a page.
     siteNav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         menuToggle.setAttribute("aria-expanded", "false");
@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Close the menu with Escape.
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         menuToggle.setAttribute("aria-expanded", "false");
@@ -43,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-    // Return to desktop navigation layout when the screen gets wider.
     window.addEventListener("resize", () => {
       if (window.innerWidth > 700) {
         menuToggle.setAttribute("aria-expanded", "false");
@@ -62,14 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         const selectedCategory = button.dataset.filter;
 
-        // Update the selected filter button.
         filterButtons.forEach((filterButton) => {
           const isActive = filterButton === button;
           filterButton.classList.toggle("active", isActive);
           filterButton.setAttribute("aria-pressed", String(isActive));
         });
 
-        // Show matching menu cards.
         menuCards.forEach((card) => {
           const matches =
             selectedCategory === "all" ||
@@ -81,12 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 4. Frontend-only contact form validation.
+  // 4. Contact form connected to the Flask backend.
   const contactForm = document.querySelector("#contact-form");
   const formStatus = document.querySelector("#form-status");
 
   if (contactForm && formStatus) {
-    contactForm.addEventListener("submit", (event) => {
+    contactForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       formStatus.textContent = "";
@@ -100,22 +96,54 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      const name = document.querySelector("#name").value.trim();
-      const message = document.querySelector("#message").value.trim();
+      const submitButton = contactForm.querySelector(
+        'button[type="submit"]'
+      );
 
-      if (name.length < 2 || message.length < 10) {
+      const data = {
+        name: document.querySelector("#name").value.trim(),
+        email: document.querySelector("#email").value.trim(),
+        subject: document.querySelector("#subject").value,
+        message: document.querySelector("#message").value.trim()
+      };
+
+      if (data.name.length < 2 || data.message.length < 10) {
         formStatus.textContent =
-          "Please enter your name and a message of at least 10 characters.";
+          "Please enter a valid name and a message of at least 10 characters.";
         formStatus.classList.add("error");
         return;
       }
 
-      formStatus.textContent =
-        `Thank you, ${name}! The demo form works, but your message has not been sent. A backend or form service is needed to receive messages.`;
-      formStatus.classList.add("success");
+      submitButton.disabled = true;
+      formStatus.textContent = "Sending your message...";
 
-      // Clear the form after displaying the demo confirmation.
-      contactForm.reset();
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          throw new Error(result.error || "Could not save your message.");
+        }
+
+        formStatus.textContent = result.message;
+        formStatus.classList.add("success");
+        contactForm.reset();
+      } catch (error) {
+        formStatus.textContent =
+          error.message ||
+          "Unable to connect to the server. Please try again.";
+        formStatus.classList.add("error");
+      } finally {
+        submitButton.disabled = false;
+      }
     });
   }
 });
+
