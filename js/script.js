@@ -118,7 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
       formStatus.textContent = "Sending your message...";
 
       try {
-        const response = await fetch("/api/contact", {
+        const response = await fetch(
+  "https://ember-oak-backend-imio.onrender.com/api/contact",
+  {
           method: "POST",
           headers: {
             "Content-Type": "application/json"

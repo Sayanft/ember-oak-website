@@ -1,6 +1,6 @@
 
 
-
+from flask_cors import CORS
 from flask import Flask, request, jsonify, send_from_directory
 from pathlib import Path
 import sqlite3
@@ -8,6 +8,17 @@ import os
 import psycopg
 
 app = Flask(__name__)
+
+CORS(
+    app,
+    resources={
+        r"/api/*": {
+            "origins": "https://sayanft.github.io"
+        }
+    }
+)
+
+
 
 BASE_DIR = Path(__file__).resolve().parent
 DB_PATH = BASE_DIR / "messages.db"
