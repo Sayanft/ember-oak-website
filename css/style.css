@@ -532,3 +532,128 @@ button { cursor: pointer; }
   accent-color: var(--brown);
 }
 
+
+/* =========================================
+   HOMEPAGE - PREMIUM ENHANCEMENTS
+   ========================================= */
+
+/* Featured coffee cards */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(36, 35, 31, 0.09);
+}
+
+/* Coffee images */
+.product-image,
+.intro-image-wrap,
+.visit-photo {
+  overflow: hidden;
+}
+
+.product-image img,
+.intro-image-wrap img,
+.visit-photo img {
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.06);
+}
+
+.intro-image-wrap:hover img,
+.visit-photo:hover img {
+  transform: scale(1.025);
+}
+
+/* Homepage buttons */
+.hero-actions .btn,
+.visit-content .btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-actions .btn:hover,
+.visit-content .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(36, 35, 31, 0.16);
+}
+
+/* Accessible keyboard focus */
+.product-card a:focus-visible,
+.hero-actions a:focus-visible,
+.visit-content a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   HERO SECTION - PREMIUM FINISH
+   ========================================= */
+
+.hero {
+  min-height: 720px;
+}
+
+.hero-image {
+  background-position: center, center 52%;
+  animation: heroReveal 1.5s ease both;
+}
+
+.hero-content {
+  max-width: 1180px;
+}
+
+.hero h1 {
+  font-size: clamp(54px, 7vw, 92px);
+  letter-spacing: -3.5px;
+  line-height: 1.04;
+}
+
+.hero-copy {
+  max-width: 440px;
+  font-size: 15px;
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-actions {
+  gap: 32px;
+}
+
+.hero-note {
+  margin-top: 75px;
+  letter-spacing: 1px;
+}
+
+.hero-index {
+  opacity: 0.8;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    padding-block: 85px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 11vw, 64px);
+    letter-spacing: -2px;
+  }
+
+  .hero-copy {
+    font-size: 14px;
+    max-width: 340px;
+  }
+
+  .hero-note {
+    margin-top: 48px;
+  }
+}
+
