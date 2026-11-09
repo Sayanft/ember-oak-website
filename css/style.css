@@ -467,4 +467,68 @@ button { cursor: pointer; }
   .filter-btn { padding: 8px 9px; }
   .footer-main { grid-template-columns: 1fr; }
   .footer-main > div:first-child { grid-column: auto; }
+}/* =========================================
+   CONTACT FORM - PREMIUM ENHANCEMENTS
+   ========================================= */
+
+.contact-form-panel {
+  border-radius: 6px;
+  box-shadow: 0 18px 45px rgba(36, 35, 31, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+
+.contact-form-panel:hover {
+  box-shadow: 0 22px 55px rgba(36, 35, 31, 0.09);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  min-height: 48px;
+  border-radius: 4px;
+  transition: border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              background 0.25s ease;
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: var(--gold);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--brown);
+  background: #fffdf9;
+  box-shadow: 0 0 0 4px rgba(197, 161, 109, 0.14);
+}
+
+.form-submit {
+  border-radius: 4px;
+  transition: background 0.25s ease,
+              transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.form-submit:hover {
+  box-shadow: 0 8px 20px rgba(36, 35, 31, 0.16);
+}
+
+.form-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+.consent-row {
+  cursor: pointer;
+}
+
+.consent-row input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--brown);
+}
+
